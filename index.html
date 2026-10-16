@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <title>Everydaying</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Панель добавления виджетов">
+      <a class="brand" href="#" aria-label="Жестко для жизни — на главную">
+        <span class="brand-mark">!</span>
+        <span><strong>Everydaying</strong><small>Твоя панель управления</small></span>
+      </a>
+
+      <div class="sidebar-section">
+        <p class="section-label">ДОБАВИТЬ ВИДЖЕТ</p>
+        <button class="add-widget" data-widget="tasks"><span class="add-icon">＋</span><span><b>Список
+              дел</b><small>Задачи на день</small></span></button>
+        <button class="add-widget" data-widget="calendar"><span
+            class="add-icon">＋</span><span><b>Календарь</b><small>События и планы</small></span></button>
+        <button class="add-widget" data-widget="notes"><span class="add-icon">＋</span><span><b>Заметки</b><small>Мысли и
+              идеи</small></span></button>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="section-label">СЛУЧАЙНОЕ</p>
+        <button class="add-widget" data-widget="word"><span class="add-icon">＋</span><span><b>Слово дня</b><small>Random
+              Lexicon</small></span></button>
+        <button class="add-widget" data-widget="fact"><span class="add-icon">＋</span><span><b>Факт дня</b><small>Useless
+              Facts</small></span></button>
+        <button class="add-widget" data-widget="quiz"><span class="add-icon">＋</span><span><b>Викторина</b><small>Open
+              Trivia DB</small></span></button>
+      </div>
+
+      <div class="sidebar-bottom">
+        <span class="status-dot"></span><span>Локальное сохранение включено</span>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">ТВОЁ ПРОСТРАНСТВО</p>
+          <h1>Everydaying<span class="title-period">.</span></h1>
+          <p class="subtitle">Меньше хаоса. Больше сделанного.</p>
+        </div>
+        <div class="topbar-tools">
+          <div class="topbar-date" id="today-label">ТВОЙ ДЕНЬ</div>
+          <button class="button button-quiet" id="reset-layout" type="button">Сбросить панель</button>
+        </div>
+      </header>
+
+      <section id="widget-grid" class="widget-grid" aria-label="Карточки виджетов"></section>
+      <footer class="footer-note">Сделано для жизни, а не для идеальной продуктивности.</footer>
+    </main>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
